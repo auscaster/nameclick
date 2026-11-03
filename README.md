@@ -1,5 +1,48 @@
 # Nameclick by Sourcey
 
-Nameclick is a browser tool in development. Select a name in an article, speaker list or interview to look for that person's professional contact details. The web finder is planned to accept a LinkedIn profile URL.
+Find a person's work email from their LinkedIn profile, or from their name on any page. The card
+shows who matched, so you know it is the right person before you write.
 
-There is no installable release yet.
+- **Extension:** Chrome, Edge and Firefox, listed once each store approves it. Until then, the
+  [LinkedIn email finder](https://sourcey.com/linkedin-email-finder) does the same lookup from a
+  profile's address.
+- **Agents:** the hosted MCP server at `https://mcp.nameclick.co/mcp`, registry name
+  `co.nameclick/nameclick`.
+- **API:** described at [api.nameclick.co/openapi.json](https://api.nameclick.co/openapi.json).
+
+## The MCP server
+
+| Tool | Does |
+| --- | --- |
+| `find_contact` | Finds who a person is and their work email, from a LinkedIn address, an email, a GitHub login, or a full name with their company or its domain. One lookup is spent only when a work email is shown. |
+| `get_contact` | Reopens a person you found before, free. |
+| `get_services` | The lookup API, for agents that call it directly. Free, no key. |
+
+The `find_work_email` prompt gives clients a slash command. `find_contact` and `get_contact` take
+a key in the `Authorization` header, as `Bearer <key>`, from the extension's settings under "Use
+Nameclick in your agent".
+
+```json
+{
+  "mcpServers": {
+    "nameclick": {
+      "type": "http",
+      "url": "https://mcp.nameclick.co/mcp",
+      "headers": { "Authorization": "Bearer <your Nameclick key>" }
+    }
+  }
+}
+```
+
+The [skill](skills/nameclick/SKILL.md) teaches an agent to resolve the person first and to look up
+only the person the user asked about.
+
+## Privacy
+
+Nameclick reads a profile's address, or a selected name and the text around it, only when you
+press. The [privacy policy](https://sourcey.com/nameclick/privacy) says what is kept, and anyone in
+it can [ask to be removed](https://sourcey.com/nameclick/remove).
+
+## Licence
+
+Apache-2.0. See [LICENSE](LICENSE).

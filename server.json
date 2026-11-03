@@ -1,0 +1,60 @@
+{
+	"$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+	"name": "co.nameclick/nameclick",
+	"title": "Nameclick",
+	"description": "Find a person's work email, with their roles and company, from a profile, email or name.",
+	"version": "0.1.0",
+	"websiteUrl": "https://sourcey.com/nameclick",
+	"icons": [
+		{
+			"src": "https://mcp.nameclick.co/icons/nameclick-symbol.svg",
+			"mimeType": "image/svg+xml",
+			"sizes": [
+				"any"
+			],
+			"theme": "light"
+		},
+		{
+			"src": "https://mcp.nameclick.co/icons/nameclick-symbol-reversed.svg",
+			"mimeType": "image/svg+xml",
+			"sizes": [
+				"any"
+			],
+			"theme": "dark"
+		},
+		{
+			"src": "https://mcp.nameclick.co/icons/nameclick-light-512.png",
+			"mimeType": "image/png",
+			"sizes": [
+				"512x512"
+			],
+			"theme": "light"
+		},
+		{
+			"src": "https://mcp.nameclick.co/icons/nameclick-dark-512.png",
+			"mimeType": "image/png",
+			"sizes": [
+				"512x512"
+			],
+			"theme": "dark"
+		}
+	],
+	"repository": {
+		"url": "https://github.com/auscaster/nameclick",
+		"source": "github"
+	},
+	"remotes": [
+		{
+			"type": "streamable-http",
+			"url": "https://mcp.nameclick.co/mcp",
+			"headers": [
+				{
+					"name": "Authorization",
+					"description": "Bearer <your Nameclick key>, from the extension's settings.",
+					"isRequired": false,
+					"isSecret": true
+				}
+			]
+		}
+	]
+}
