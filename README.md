@@ -4,9 +4,10 @@ Find a person's email address from their LinkedIn profile, their GitHub login, o
 page, X and YouTube included, enriched with their roles and company. The card shows who matched, so
 you know it is the right person before you write.
 
-- **Extension:** Chrome, Edge and Firefox, listed once each store approves it. Until then, the
-  [LinkedIn email finder](https://sourcey.com/linkedin-email-finder) does the same lookup from a
-  profile's address.
+- **Extension:** on the [Chrome Web Store](https://chromewebstore.google.com/detail/hnknkbjoidfdjocmdjjfchiggmgmcojl),
+  which Brave, Arc and Opera install from too; Edge and Firefox list it once their stores approve
+  it. On the web, the [LinkedIn email finder](https://sourcey.com/linkedin-email-finder) does the
+  same lookup from a profile's address.
 - **Agents:** the hosted MCP server at `https://mcp.nameclick.co/mcp`, registry name
   `co.nameclick/nameclick`.
 - **API:** described at [api.nameclick.co/openapi.json](https://api.nameclick.co/openapi.json).
