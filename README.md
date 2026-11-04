@@ -1,7 +1,8 @@
 # Nameclick by Sourcey
 
-Find a person's work email from their LinkedIn profile, or from their name on any page. The card
-shows who matched, so you know it is the right person before you write.
+Find a person's email address from their LinkedIn profile, their GitHub login, or their name on any
+page, X and YouTube included, enriched with their roles and company. The card shows who matched, so
+you know it is the right person before you write.
 
 - **Extension:** Chrome, Edge and Firefox, listed once each store approves it. Until then, the
   [LinkedIn email finder](https://sourcey.com/linkedin-email-finder) does the same lookup from a
@@ -14,11 +15,11 @@ shows who matched, so you know it is the right person before you write.
 
 | Tool | Does |
 | --- | --- |
-| `find_contact` | Finds who a person is and their work email, from a LinkedIn address, an email, a GitHub login, or a full name with their company or its domain. One lookup is spent only when a work email is shown. |
+| `find_contact` | Finds who a person is and their email address, from a LinkedIn address, an email, a GitHub login, a full name with their company or its domain, or their name on a page. One lookup is spent only the first time an email address on record is shown for someone. |
 | `get_contact` | Reopens a person you found before, free. |
 | `get_services` | The lookup API, for agents that call it directly. Free, no key. |
 
-The `find_work_email` prompt gives clients a slash command. `find_contact` and `get_contact` take
+The `find_email` prompt gives clients a slash command. `find_contact` and `get_contact` take
 a key in the `Authorization` header, as `Bearer <key>`, from the extension's settings under "Use
 Nameclick in your agent".
 
