@@ -18,13 +18,13 @@ you know it is the right person before you write.
 | --- | --- |
 | `find_contact` | Finds who a person is and their email address, from a LinkedIn address, an email, a GitHub login, a full name with their company or its domain, or their name on a page. One lookup is spent only the first time an email address on record is shown for someone. |
 | `get_contact` | Reopens a person you found before, free. |
-| `get_services` | The lookup API, for agents that call it directly. Uses no lookups. |
+| `get_services` | The lookup API, for agents that call it directly. Free, no key. |
 
 The `find_email` prompt gives clients a slash command.
 
 Add `https://mcp.nameclick.co/mcp` as a connector in Claude, ChatGPT, Cursor, VS Code or any app
-that signs in to MCP servers. It asks you to sign in with Google and approve the app, and every
-lookup it makes is on your account, the same as the extension's.
+that signs in to MCP servers. Before its first lookup it asks you to sign in with Google and approve
+the app, and every lookup it makes is on your account, the same as the extension's.
 
 An agent that can't sign in, such as a script, sends a key in the `Authorization` header instead,
 as `Bearer <key>`, from the extension's settings under "Use Nameclick in your agent":
